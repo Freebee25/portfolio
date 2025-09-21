@@ -20,32 +20,36 @@
   </div>
 
   <!-- Navbar -->
-  <header class="navbar shadow sticky top-0 z-40">
-    <div class="container flex justify-between items-center">
-      <div class="logo">Freebee</div>
-  
-      <!-- Hamburger -->
-      <button class="hamburger md:hidden text-2xl" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </button>
-  
-      <!-- Nav Links -->
-      <ul class="nav-links hidden md:flex space-x-6" id="nav-links">
-        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="profile.html" class="hover:text-yellow-400">Our Profile</a></li>
-        <li><a href="portofolio.html" class="hover:text-yellow-400">Portfolio</a></li>
-        <li><a href="index.html#message" class="hover:text-yellow-400">Message Us</a></li>
-      </ul>
-    </div>
-  
-    <!-- Mobile Menu -->
-    <ul class="mobile-nav hidden flex-col space-y-4 px-6 py-4 bg-blue-800 md:hidden" id="mobile-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="profile.html">Our Profile</a></li>
-      <li><a href="portofolio.html">Portfolio</a></li>
-      <li><a href="index.html#message">Message Us</a></li>
+<nav class="bg-white shadow">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#" class="font-bold text-xl">Freebee</a>
+
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex space-x-6 font-medium">
+      <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+      <li><a href="profile.html" class="hover:text-blue-500">Our Profile</a></li>
+      <li><a href="portofolio.html" class="hover:text-blue-500">Portfolio</a></li>
+      <li><a href="index.html#message" class="hover:text-blue-500">Message Us</a></li>
     </ul>
-  </header>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-2xl">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu (Slide Down) -->
+  <div id="mobile-menu"
+    class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden bg-white shadow w-full">
+    <ul class="flex flex-col font-medium">
+      <li><a href="index.html" class="block px-6 py-3 border-b hover:text-blue-500">Home</a></li>
+      <li><a href="profile.html" class="block px-6 py-3 border-b hover:text-blue-500">Our Profile</a></li>
+      <li><a href="portofolio.html" class="block px-6 py-3 border-b hover:text-blue-500">Portfolio</a></li>
+      <li><a href="index.html#message" class="block px-6 py-3 hover:text-blue-500">Message Us</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- Hero Section -->
   <section id="home" class="relative w-full h-[500px]">
