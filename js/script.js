@@ -43,19 +43,14 @@ if (form) {
   });
 }
 
-// hamburger menu
-const hamburger = document.getElementById("hamburger");
-const mobileNav = document.getElementById("mobile-nav");
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+let menuOpen = false;
 
-if (hamburger && mobileNav) {
-  let menuOpen = false;
-
-  hamburger.addEventListener("click", () => {
-    menuOpen = !menuOpen;
-    mobileNav.classList.toggle("hidden");
-    mobileNav.classList.toggle("flex"); // biar muncul flex di mobile
-    hamburger.innerHTML = menuOpen
-      ? '<i class="fas fa-times"></i>'
-      : '<i class="fas fa-bars"></i>';
-  });
-}
+menuBtn.addEventListener("click", () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle("hidden");
+  menuBtn.innerHTML = menuOpen
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
+});
